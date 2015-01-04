@@ -1,0 +1,4 @@
+composer.phar
+*.swp
+*.lock
+vendor/
