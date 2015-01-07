@@ -29,20 +29,16 @@ class FizzBuzz
                 && $this->isMultiple(5, $count)
             ) {
                 $this->fizzbuzz[] = 'fizzbuzz';
-                continue;
-            }
 
-            if ($this->isMultiple(3, $count)) {
+            } else if ($this->isMultiple(3, $count)) {
                 $this->fizzbuzz[] = 'fizz';
-                continue;
-            }
 
-            if ($this->isMultiple(5, $count)) {
+            } else if ($this->isMultiple(5, $count)) {
                 $this->fizzbuzz[] = 'buzz';
-                continue;
-            }
 
-            $this->fizzbuzz[] = $count;
+            } else {
+                $this->fizzbuzz[] = $count;
+            }
         }
 
         return $this->fizzbuzz;
