@@ -15,7 +15,7 @@ class FizzBuzz
      */
     public function play($number)
     {
-        $isInteger = $this->isInteger($number);
+        $isInteger = Number::isInteger($number);
         $overStartNumber = ($number < $this->startNumber);
 
         if (!$isInteger || $overStartNumber) {
@@ -25,15 +25,15 @@ class FizzBuzz
         for ($count = 1; $count <= $number; $count++) {
 
             if (
-                $this->isMultiple(3, $count)
-                && $this->isMultiple(5, $count)
+               Number::isMultiple(3, $count)
+               && Number::isMultiple(5, $count)
             ) {
                 $this->fizzbuzz[] = 'fizzbuzz';
 
-            } else if ($this->isMultiple(3, $count)) {
+            } else if (Number::isMultiple(3, $count)) {
                 $this->fizzbuzz[] = 'fizz';
 
-            } else if ($this->isMultiple(5, $count)) {
+            } else if (Number::isMultiple(5, $count)) {
                 $this->fizzbuzz[] = 'buzz';
 
             } else {
@@ -42,26 +42,5 @@ class FizzBuzz
         }
 
         return $this->fizzbuzz;
-    }
-
-    /**
-     * Is Multiple
-     * @param int $of Multiple of
-     * @param int $number Is Multiple?
-     * @return bool
-     */
-    private function isMultiple($of, $number)
-    {
-        return (($number % $of) == 0);
-    }
-
-    /**
-     * Is Integer
-     * @param mixed $value
-     * @return bool
-     */
-    private function isInteger($value)
-    {
-        return is_integer($value);
     }
 }
