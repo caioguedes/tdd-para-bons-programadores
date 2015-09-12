@@ -1,4 +1,5 @@
 composer.phar
 *.swp
 *.lock
+.phpintel/
 vendor/
