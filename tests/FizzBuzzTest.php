@@ -103,5 +103,34 @@ class FizzBuzzTest extends PHPUnit_Framework_TestCase
             [15, true]
         ];
     }
+
+    /**
+     * @dataProvider buzzNumbersProvider
+     */
+    public function testIsBuzz($number, $expected)
+    {
+        $this->assertEquals($expected, $this->fb->isBuzz($number));
+    }
+
+    public function buzzNumbersProvider()
+    {
+        return [
+            [1, false],
+            [2, false],
+            [3, false],
+            [4, false],
+            [5, true],
+            [6, false],
+            [7, false],
+            [8, false],
+            [9, false],
+            [10, true],
+            [11, false],
+            [12, false],
+            [13, false],
+            [14, false],
+            [15, true]
+        ];
+    }
 }
 

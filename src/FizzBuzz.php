@@ -48,4 +48,9 @@ class FizzBuzz
     {
         return (Number::isMultiple(3, $number) === true);
     }
+
+    public function isBuzz($number)
+    {
+        return (Number::isMultiple(5, $number) == true);
+    }
 }
