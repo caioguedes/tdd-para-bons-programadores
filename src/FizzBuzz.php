@@ -23,7 +23,7 @@ class FizzBuzz
         $overStartNumber = ($number < $this->startNumber);
 
         if (!$isInteger || $overStartNumber) {
-            return false;
+            throw new InvalidArgumentException;
         }
 
         for ($count = 1; $count <= $number; $count++) {
