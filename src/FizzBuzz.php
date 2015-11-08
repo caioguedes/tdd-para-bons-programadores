@@ -4,7 +4,11 @@
  * Fizz Buzz Game Class
  */
 class FizzBuzz
-{ public $startNumber = 1;
+{
+    /** @var integer $startNumber Play Start Number */
+    public $startNumber = 1;
+
+    /** @var array $fizzbuzz Storage FizzBuzz Sequence */
     public $fizzbuzz = [];
 
     /**
@@ -24,16 +28,13 @@ class FizzBuzz
 
         for ($count = 1; $count <= $number; $count++) {
 
-            if (
-               Number::isMultiple(3, $count)
-               && Number::isMultiple(5, $count)
-            ) {
+            if ($this->isFizzBuzz($count)) {
                 $this->fizzbuzz[] = 'fizzbuzz';
 
-            } else if (Number::isMultiple(3, $count)) {
+            } else if ($this->isFizz($count)) {
                 $this->fizzbuzz[] = 'fizz';
 
-            } else if (Number::isMultiple(5, $count)) {
+            } else if ($this->isBuzz($count)) {
                 $this->fizzbuzz[] = 'buzz';
 
             } else {
