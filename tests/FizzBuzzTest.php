@@ -74,5 +74,34 @@ class FizzBuzzTest extends PHPUnit_Framework_TestCase
             [1], $this->fb->play(1)
         );
     }
+
+    /**
+     * @dataProvider fizzNumbersProvider
+     */
+    public function testIsFizz($number, $expected)
+    {
+        $this->assertEquals($expected, $this->fb->isFizz($number));
+    }
+
+    public function fizzNumbersProvider()
+    {
+        return [
+            [1, false],
+            [2, false],
+            [3, true],
+            [4, false],
+            [5, false],
+            [6, true],
+            [7, false],
+            [8, false],
+            [9, true],
+            [10, false],
+            [11, false],
+            [12, true],
+            [13, false],
+            [14, false],
+            [15, true]
+        ];
+    }
 }
 

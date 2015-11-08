@@ -43,4 +43,9 @@ class FizzBuzz
 
         return $this->fizzbuzz;
     }
+
+    public function isFizz($number)
+    {
+        return (Number::isMultiple(3, $number) === true);
+    }
 }
