@@ -56,13 +56,24 @@ class FizzBuzz
     }
 
     /**
-     * @Verify if is Buzz number.
+     * Verify if is Buzz number.
      *
      * @param integer $number Number
      * @return boolean
      */
     public function isBuzz($number)
     {
-        return (Number::isMultiple(5, $number) == true);
+        return (Number::isMultiple(5, $number) === true);
+    }
+
+    /**
+     * Verify if is Fizz and Buzz Number.
+     *
+     * @param integer $number Number
+     * @return boolean
+     */
+    public function isFizzBuzz($number)
+    {
+        return ($this->isFizz($number) && $this->isBuzz($number) === true);
     }
 }
