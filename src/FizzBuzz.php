@@ -4,12 +4,12 @@
  * Fizz Buzz Game Class
  */
 class FizzBuzz
-{
-    public $startNumber = 1;
+{ public $startNumber = 1;
     public $fizzbuzz = [];
 
     /**
-     * Play
+     * Play.
+     *
      * @param int $number Start Number
      * @return array
      */
@@ -44,11 +44,23 @@ class FizzBuzz
         return $this->fizzbuzz;
     }
 
+    /**
+     * Verify if is Fizz number.
+     *
+     * @param integer $number Number
+     * @return boolean
+     */
     public function isFizz($number)
     {
         return (Number::isMultiple(3, $number) === true);
     }
 
+    /**
+     * @Verify if is Buzz number.
+     *
+     * @param integer $number Number
+     * @return boolean
+     */
     public function isBuzz($number)
     {
         return (Number::isMultiple(5, $number) == true);
