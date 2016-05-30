@@ -1,4 +1,6 @@
 {
+    "name": "tdd-para-bons-programadores",
+    "description": "fontes dos exercícios criados durante o curso.",
     "require-dev" : {
         "phpunit/phpunit" : "*"
     },
