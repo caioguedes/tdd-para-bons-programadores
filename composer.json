@@ -1,5 +1,5 @@
 {
-    "name": "tddparabonsprogramadores",
+    "name": "caioguedes/tddparabonsprogramadores",
     "description": "fontes dos exercícios criados durante o curso.",
     "require-dev" : {
         "phpunit/phpunit" : "*"
